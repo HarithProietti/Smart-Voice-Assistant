@@ -9,7 +9,7 @@ class AudioInterface:
     def listen(self) -> str:
         # listens to the microphone and translates it to text
         recognizer = sr.Recognizer()
-        with sr.Microphone() as source:
+        with sr.Microphone(device_index=1) as source:
             print("Say something")
             audio = recognizer.listen(source)
 
@@ -17,6 +17,8 @@ class AudioInterface:
             audio,
             api_key=os.environ['OPENAI_API_KEY']
         )
+
+        return text
 
     def speak(self, text):
         # takes as input a text and speaks with the assistant voice
