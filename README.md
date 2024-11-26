@@ -22,6 +22,16 @@ On mac, simply do:
 brew install ffmpeg
 ```
 
+## Setup of Google Search
+
+One needs to create a project on GCP with an API key, and also create a search engine on https://programmablesearchengine.google.com/ , with its associated api key.
+
+One should also install the google client on python:
+
+```
+pip install google-api-python-client
+```
+
 ## Spech2Text
 
 We use the Whisper API from openai
